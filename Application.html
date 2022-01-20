@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Computer Vision</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon (1).ico">
+  </head>
+  <body>
+
+  <nav>
+    <p>Bartek Kowalski - Computer Vision</p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Hover for information on CV</a>
+        <ul>
+          <li><a href="whatis.html"></a>What is computer Vision?</li>
+          <li><a href="traditional.html"></a>Traditional Computer Vision Techniques</li>
+          <li><a href="Application.html"></a>Applications of AI in computer Vision</li>
+          <li><a href="howcani.html"></a>How can I get started with Computer Vision?</li>
+        </ul>
+      </li>
+    </ul>
+
+  </nav>
+
+  <h1>Applications of AI in Computer Vision</h1>
+  <h2>Why use AI with Computer Vision?<br><br>
+Even though traditional computer vision techniques were used in many areas of research, they often were not very reliable and tended to take up alot of computational memory.
+<br><br>
+The introduction of AI and machine learning into the field of computer Vision drastically changes the method in which computers identify and classify images. Over the years, many different methods have been proposed to achieve high success rates and quick computational speeds.
+<br><br>
+Haar Cascades
+<br><br>
+‘Haar Cascades’ is a method proposed by Paul Viola and Michael Jones for object detection. At the base level, a function is trained based on many positive images (images that contain the object you want to detect), as well as negative images (images that don't contain the object you want to detect).
+<br><br>
+Once the algorithm receives the positive and negative images, it needs to extract features from the positive images. A feature is a “single value obtained by subtracting the sum of pixels under the white rectangle from the sum of pixels under the black rectangle”, as seen in the image below. This is a similar method to edge detection, however pixels are compared as groups, in contrast to the pixel vs pixel detection. [5]
+<br><br>
+</h2>
+<img class="haar" src="img/img8.png" alt="Compsci">
+<br><br>
+<h2>This results in features like the following:</h2>
+<br><br>
+<img class="computers" src="img/img9.png" alt="Compsci">
+<br><br>
+<h2>This method is a strong way to detect faces.
+<br><br>
+Image Classification
+<br><br>
+Image classification is a core problem/task within computer vision. [6] It detracts what is inside an image. For example:
+</h2><br><br>
+<img class="computers" src="img/img10.png" alt="Compsci">
+<br><br><h2>We see in the image above that computers are tasked with classifying and labelling objects within an image. Computers have a difficult time doing this. This is because of a “semantic gap”, where the computer's only context for an image is an array of RGB values. However, humans have years of information and evolution stored in their brain that can classify objects intuitively. So, how can we enable computers to classify images, similarly to how a human would?
+</h2><br><br>
+<h2>Some problems you may come across when attempting this are:
+  <br><br>
+  <ol>
+    <li>Viewpoint variation (looking from the top down, head on, from behind etc.), as the pixel values would change.</li>
+    <li>Obstruction (part of the image is obstructed, but the object is still there.</li>
+    <li>Interclass Variation (Different types of a class of objects, ex. Different types of cats)</li>
+    <li>Background clutter (Some animals blend into their background, can be harder to detect as the pixel values are similar)</li>
+    <li>Deformation (same object, different form)</li>
+  </ol><br><br>
+  <h2>Uses for image classification: [6]
+    <br><br>
+    <ol>
+      <li>Classifying galaxies</li>
+      <li>Finding cancer within patients (scans, etc)</li>
+      <li>Medical imaging</li>
+      <li>Self driving cars (finding pedestrians, other cars, stop lights, etc).</li>
+      <li>Camera focus (finding the person to focus on).</li>
+      <li>And many more!</li>
+    </ol>
+  </h2><br><br>
+  <h2>Nearest Neighbour method:<br><br>
+
+This is one way to classify images. We take in a training set of images (of your choosing, must be large enough and good enough. Good datasets include the CIFAR100 and IMAGENET) and take in the data to memory. This algorithm is very simple - it takes the test image, subtracts the pixel-wise value to the training image, and adds the absolute value of the difference as seen below.
+    <br><br>
+  </h2>
+
+  <img class="computers" src="img/img11.png" alt="Compsci">
+<h2>*credit to Justin Johnson and the University of Michigan
+<br><br>
+This is done to all of the training images, and the image with the smallest pixel wise absolute value difference is selected as the classifier.
+<br><br>
+A slightly more advanced version of this is the kNN algorithm (k nearest neighbours), with k being the numbers of nearest neighbours you want to consider. So, instead of only taking the closest image in terms of pixel values, you consider ‘k’ training images that have the nearest pixel values when you make your decision. This helps smoothen out outliers in your training data. [6]
+<br><br>
+</h2>
+<img class="computers" src="img/img12.png" alt="Compsci"><br>
+<h2>*credit to Justin Johnson and the University of Michigan
+<br><br>
+Linear Classifiers:
+<br><br>
+At the base level, linear classifiers set a direct decision boundary between two different objects. To do this, they use neural networks, which have their decision adjusted by parameters and weights which are specified by the creator of the algorithm. [7]
+<br><br>
+Visual example of a linear classifier:<br>
+</h2>
+<img class="c" src="img/img13.png" alt="Compsci"><br>
+<h2>Convolutional Neural Networks (CNN)
+<br><br>
+CNN’s are the most popular form of machine learning used in computer vision. When used correctly, they can perform the classification of images even better than humans can. A typical CNN architecture is as follows:
+</h2><br><br>
+<img class="computers" src="img/img14.png" alt="Compsci"><br>
+<h2>CNN’s are complex systems that allow for incredibly accurate predictions given enough test data. When looking for the most accurate computer vision systems possible, CNN’s are the way to go. [1] [8]</h2>
+<br><br>
+<div class="bottom">
+  <p>Copyright Ⓒ 2021 Bartek Kowalski.</p>
+</div>
+  </body>
+</html>

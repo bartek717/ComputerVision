@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Computer Vision</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon (1).ico">
+  </head>
+  <body>
+
+  <nav>
+    <p>Bartek Kowalski - Computer Vision</p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Hover for information on CV</a>
+        <ul>
+          <li><a href="whatis.html"></a>What is computer Vision?</li>
+          <li><a href="traditional.html"></a>Traditional Computer Vision Techniques</li>
+          <li><a href="Application.html"></a>Applications of AI in computer Vision</li>
+          <li><a href="howcani.html"></a>How can I get started with Computer Vision?</li>
+        </ul>
+      </li>
+    </ul>
+
+  </nav>
+
+
+<h1>Traditional Computer Vision Techniques</h1>
+<h2>Compared to today’s approaches, traditional computer vision techniques were relatively innacurate in comparison to modern day techniques in classifying images. However, they often required less computational power compared to CNN's.[3]
+<br><br>
+First, let's note down how computers take in images. Each image is composed of pixels - each of which has an intensity (the average of the RGB (red, green and blue) values). A grid of these pixels combine to create an image.
+<br><br>
+Edge Detection:
+<br><br>
+Using the intensity of the pixels, we can use algorithms to detect where there are drastic changes in the pixel intensities. Using a simple for loop, we can detect when an intensity has changed over a specific value that we specify. By joining together the areas where the pixel intensities drastically change, we can detect edges. [4]
+<br><br>
+Examples of Edge Detection algorithms:
+<br><br>
+Canny Edge detection:
+</h2>
+<img class="computers" src="img/img5.png" alt="Compsci">
+<br><br>
+<h2>Sobel Edge detection:</h2>
+<br><br>
+<img class="computers" src="img/img6.png" alt="Compsci">
+<br><br>
+<h2>Sometimes, images that we receive have rapid changes in pixel intensities that are not a part of the image itself. To get rid of these outliers, we can use blurring to remove these extreme outliers and get a better image to work with. Often, with higher blur, we see less edges in the image we are processing. [9] </h2>
+<br><br>
+<h2>Gaussian Blur:</h2>
+<br><br>
+<img class="c" src="img/img7.png" alt="Compsci">
+<h2>*the higher the StDev, the higher the blur is for the image <br><br>
+There were many problems with traditional computer vision. Often, the partial obstruction, change in orientation, or even size caused failure within the algorithm. To solve this, we use Machine Learning and AI.
+</h2>
+
+<div class="bottom">
+  <p>Copyright Ⓒ 2021 Bartek Kowalski.</p>
+</div>
+  </body>
+</html>
